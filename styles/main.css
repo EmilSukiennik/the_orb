@@ -1,0 +1,72 @@
+.clock__center, .clock__hand-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.page {
+  background-color: #000;
+}
+
+.clock__hand-container {
+  transform: translate(-50%, -100%);
+}
+.clock__hand-container--second {
+  z-index: 3;
+}
+.clock__hand {
+  border-style: solid;
+  transform-origin: bottom center;
+  border-color: transparent;
+  animation: clockwise linear 3600s infinite;
+  border-width: 0 14px 400px 14px;
+  border-bottom-color: rgba(255, 0, 0, 0.6);
+  animation-duration: 0.0001s;
+}
+.clock__hand--second {
+  border-width: 0 10px 420px 10px;
+  border-bottom-color: rgba(0, 255, 0, 0.6);
+  animation-duration: 0.0002s;
+}
+@keyframes clockwise {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.clock__center {
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 170px;
+  width: 170px;
+  background-color: rgba(255, 0, 0, 0.4);
+  z-index: 1;
+}
+.clock__center--black-big {
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 161.5px;
+  width: 161.5px;
+  background-color: black;
+  z-index: 2;
+}
+.clock__center--green {
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 136px;
+  width: 136px;
+  background-color: rgba(0, 255, 0, 0.4);
+  z-index: 4;
+}
+.clock__center--black-small {
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 127.5px;
+  width: 127.5px;
+  background-color: black;
+  z-index: 5;
+}
+
+/*# sourceMappingURL=main.css.map */

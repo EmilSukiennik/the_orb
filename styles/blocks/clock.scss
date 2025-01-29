@@ -1,0 +1,50 @@
+.clock {
+
+  &__hand-container {
+    @extend %position;
+    transform: translate(-50%, -100%);
+
+    &--second {
+      z-index: 3;
+    }
+  }
+
+  &__hand {
+    border-style: solid;
+    transform-origin: bottom center;
+    border-color: transparent;
+    animation: clockwise linear 3600s infinite;
+    @include hand(28px, 400px, red, 0.6, .0001s);
+
+    &--second {
+      @include hand(20px, 420px, #0f0, 0.6, .0002s)
+    }
+
+    @keyframes clockwise {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__center {
+    @extend %position;
+    @include ring(1.0, #f00, 0.4, 1);
+
+    &--black-big {
+      @include ring(0.95, #000, 1.0, 2)
+    }
+
+    &--green {
+      @include ring(0.8, #0f0, 0.4, 4)
+    }
+
+    &--black-small {
+      @include ring(0.75, #000, 1.0, 5)
+    }
+  }
+}
