@@ -13,10 +13,10 @@
     transform-origin: bottom center;
     border-color: transparent;
     animation: clockwise linear 3600s infinite;
-    @include hand(28px, .4, red, 0.9, .000025s);
+    @include hand(0.005, .4, red, 0.9, .000025s);
 
     &--second {
-      @include hand(20px, .45, #0f0, 0.9, .000035s)
+      @include hand(0.006, .45, #0f0, 0.9, .000035s)
     }
 
     @keyframes clockwise {

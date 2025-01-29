@@ -1,5 +1,5 @@
 @mixin hand($width, $fraction, $color, $opacity, $interval) {
-  border-width: 0 $width * 0.5 calc($main-unit * $fraction) $width * 0.5;
+  border-width: 0 calc($main-unit * $width) calc($main-unit * $fraction) calc($main-unit * $width);
   border-bottom-color: rgba($color, $opacity);
   animation-duration: $interval;
 }
