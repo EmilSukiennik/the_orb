@@ -8,6 +8,10 @@
   background-color: #000;
 }
 
+.clock {
+  --smallhand: min(40vw, 40vh);
+  --bighand: min(45vw, 45vh);
+}
 .clock__hand-container {
   transform: translate(-50%, -100%);
 }
@@ -19,12 +23,12 @@
   transform-origin: bottom center;
   border-color: transparent;
   animation: clockwise linear 3600s infinite;
-  border-width: 0 14px 40vh 14px;
+  border-width: 0 14px var(--smallhand) 14px;
   border-bottom-color: rgba(255, 0, 0, 0.6);
   animation-duration: 0.0001s;
 }
 .clock__hand--second {
-  border-width: 0 10px 45vh 10px;
+  border-width: 0 10px var(--bighand) 10px;
   border-bottom-color: rgba(0, 255, 0, 0.6);
   animation-duration: 0.0002s;
 }
