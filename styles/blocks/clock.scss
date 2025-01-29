@@ -1,7 +1,4 @@
 .clock {
-  --smallhand: min(40vw, 40vh);
-  --bighand: min(45vw, 45vh);
-
   &__hand-container {
     @extend %position;
     transform: translate(-50%, -100%);
@@ -16,10 +13,10 @@
     transform-origin: bottom center;
     border-color: transparent;
     animation: clockwise linear 3600s infinite;
-    @include hand(28px, var(--smallhand), red, 0.9, .0001s);
+    @include hand(28px, .4, red, 0.9, .000025s);
 
     &--second {
-      @include hand(20px, var(--bighand), #0f0, 0.9, .0002s)
+      @include hand(20px, .45, #0f0, 0.9, .000035s)
     }
 
     @keyframes clockwise {
@@ -35,18 +32,18 @@
 
   &__center {
     @extend %position;
-    @include ring(1.0, #f00, 0.4, 1);
+    @include ring(.2, #f00, 0.4, 1);
 
     &--black-big {
-      @include ring(0.95, #000, 1.0, 2)
+      @include ring(0.19, #000, 1.0, 2)
     }
 
     &--green {
-      @include ring(0.8, #0f0, 0.4, 4)
+      @include ring(0.15, #0f0, 0.4, 4)
     }
 
     &--black-small {
-      @include ring(0.75, #000, 1.0, 5)
+      @include ring(0.14, #000, 1.0, 5)
     }
   }
 }
