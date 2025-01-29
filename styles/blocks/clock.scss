@@ -16,10 +16,10 @@
     transform-origin: bottom center;
     border-color: transparent;
     animation: clockwise linear 3600s infinite;
-    @include hand(28px, var(--smallhand), red, 0.6, .0001s);
+    @include hand(28px, var(--smallhand), red, 0.9, .0001s);
 
     &--second {
-      @include hand(20px, var(--bighand), #0f0, 0.6, .0002s)
+      @include hand(20px, var(--bighand), #0f0, 0.9, .0002s)
     }
 
     @keyframes clockwise {
