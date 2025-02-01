@@ -1,7 +1,7 @@
-@mixin hand($width, $fraction, $color, $opacity, $interval) {
+@mixin hand($width, $fraction, $color, $opacity, $frac-T) {
   border-width: 0 calc($main-unit * $width) calc($main-unit * $fraction) calc($main-unit * $width);
   border-bottom-color: rgba($color, $opacity);
-  animation-duration: $interval;
+  animation-duration: calc($main-interval * $frac-T);
 }
 
 @mixin diameter($diameter) {
@@ -15,4 +15,8 @@
   @include diameter(calc($main-unit * $fraction));
   background-color: rgba($color, $opacity);
   z-index: $z-index;
+}
+
+@mixin speed($fraction) {
+  animation-duration: $fraction;
 }

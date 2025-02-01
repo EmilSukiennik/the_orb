@@ -3,7 +3,7 @@
     @extend %position;
     transform: translate(-50%, -100%);
 
-    &--second {
+    &--02 {
       z-index: 3;
     }
   }
@@ -13,10 +13,26 @@
     transform-origin: bottom center;
     border-color: transparent;
     animation: clockwise linear 3600s infinite;
-    @include hand(0.005, .4, red, 0.9, .000025s);
+    @include hand(0.005, .4, red, 0.9, 1);
 
-    &--second {
-      @include hand(0.006, .45, #0f0, 0.9, .000035s)
+    &--02 {
+      animation: counter linear 3600s infinite;
+      @include hand(0.006, .42, rgb(37, 222, 20), 0.9, 1.2);
+    }
+
+    &--03 {
+      animation: clockwise linear 3600s infinite;
+      @include hand(0.007, .44, rgb(65, 29, 175), 0.9, 1.4);
+    }
+
+    &--04 {
+      animation: counter linear 3600s infinite;
+      @include hand(0.008, .46, rgb(154, 27, 116), 0.9, 1.6);
+    }
+
+    &--05 {
+      animation: clockwise linear 3600s infinite;
+      @include hand(0.009, .48, rgb(212, 140, 30), 0.9, 1.8);
     }
 
     @keyframes clockwise {
@@ -28,22 +44,32 @@
         transform: rotate(360deg);
       }
     }
+
+    @keyframes counter {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
   }
 
   &__center {
     @extend %position;
-    @include ring(.2, #f00, 0.4, 1);
+    @include ring(.60, #000, 08, 3);
 
     &--black-big {
-      @include ring(0.19, #000, 1.0, 2)
+      @include ring(0.62, #000, .7, 4)
     }
 
     &--green {
-      @include ring(0.15, #0f0, 0.4, 4)
+      @include ring(0.64, #000, .6, 5)
     }
 
     &--black-small {
-      @include ring(0.14, #000, 1.0, 5)
+      @include ring(0.68, #000, .5, 6)
     }
   }
 }
