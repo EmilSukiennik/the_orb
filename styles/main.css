@@ -10,6 +10,7 @@
 
 .clock__hand-container {
   transform: translate(-50%, -100%);
+  opacity: 0.8;
 }
 .clock__hand-container--02 {
   z-index: 3;
@@ -19,33 +20,27 @@
   transform-origin: bottom center;
   border-color: transparent;
   animation: clockwise linear 3600s infinite;
-  border-width: 0 calc(min(100vw, 100vh) * 0.005) calc(min(100vw, 100vh) * 0.4) calc(min(100vw, 100vh) * 0.005);
-  border-bottom-color: rgba(255, 0, 0, 0.9);
-  animation-duration: 1s;
+  border-right-width: calc(min(100vw, 100vh) * 0.005);
+  border-left-width: calc(min(100vw, 100vh) * 0.005);
+  border-bottom-width: calc(min(100vw, 100vh) * 0.4);
+  border-bottom-color: red;
+  animation-duration: 0.0001s;
 }
 .clock__hand--02 {
-  animation: counter linear 3600s infinite;
-  border-width: 0 calc(min(100vw, 100vh) * 0.006) calc(min(100vw, 100vh) * 0.42) calc(min(100vw, 100vh) * 0.006);
-  border-bottom-color: rgba(37, 222, 20, 0.9);
-  animation-duration: 1.2s;
+  border-bottom-color: rgb(37, 222, 20);
+  animation-duration: 0.00012s;
 }
 .clock__hand--03 {
-  animation: clockwise linear 3600s infinite;
-  border-width: 0 calc(min(100vw, 100vh) * 0.007) calc(min(100vw, 100vh) * 0.44) calc(min(100vw, 100vh) * 0.007);
-  border-bottom-color: rgba(65, 29, 175, 0.9);
-  animation-duration: 1.4s;
+  border-bottom-color: rgb(65, 29, 175);
+  animation-duration: 0.00014s;
 }
 .clock__hand--04 {
-  animation: counter linear 3600s infinite;
-  border-width: 0 calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.46) calc(min(100vw, 100vh) * 0.008);
-  border-bottom-color: rgba(154, 27, 116, 0.9);
-  animation-duration: 1.6s;
+  border-bottom-color: rgb(154, 27, 116);
+  animation-duration: 0.00016s;
 }
 .clock__hand--05 {
-  animation: clockwise linear 3600s infinite;
-  border-width: 0 calc(min(100vw, 100vh) * 0.009) calc(min(100vw, 100vh) * 0.48) calc(min(100vw, 100vh) * 0.009);
-  border-bottom-color: rgba(212, 140, 30, 0.9);
-  animation-duration: 1.8s;
+  border-bottom-color: rgb(212, 140, 30);
+  animation-duration: 0.00018s;
 }
 @keyframes clockwise {
   0% {
@@ -66,33 +61,33 @@
 .clock__center {
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  height: calc(min(100vw, 100vh) * 0.6);
-  width: calc(min(100vw, 100vh) * 0.6);
+  height: calc(min(100vw, 100vh) * 0.2);
+  width: calc(min(100vw, 100vh) * 0.2);
   background-color: black;
   z-index: 3;
 }
-.clock__center--black-big {
+.clock__center--02 {
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  height: calc(min(100vw, 100vh) * 0.62);
-  width: calc(min(100vw, 100vh) * 0.62);
+  height: calc(min(100vw, 100vh) * 0.22);
+  width: calc(min(100vw, 100vh) * 0.22);
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 4;
 }
-.clock__center--green {
+.clock__center--03 {
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  height: calc(min(100vw, 100vh) * 0.64);
-  width: calc(min(100vw, 100vh) * 0.64);
-  background-color: rgba(0, 0, 0, 0.6);
+  height: calc(min(100vw, 100vh) * 0.24);
+  width: calc(min(100vw, 100vh) * 0.24);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 5;
 }
-.clock__center--black-small {
+.clock__center--04 {
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  height: calc(min(100vw, 100vh) * 0.68);
-  width: calc(min(100vw, 100vh) * 0.68);
-  background-color: rgba(0, 0, 0, 0.5);
+  height: calc(min(100vw, 100vh) * 0.3);
+  width: calc(min(100vw, 100vh) * 0.3);
+  background-color: black;
   z-index: 6;
 }
 

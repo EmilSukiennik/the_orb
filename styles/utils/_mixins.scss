@@ -1,7 +1,17 @@
-@mixin hand($width, $fraction, $color, $opacity, $frac-T) {
-  border-width: 0 calc($main-unit * $width) calc($main-unit * $fraction) calc($main-unit * $width);
-  border-bottom-color: rgba($color, $opacity);
-  animation-duration: calc($main-interval * $frac-T);
+@mixin hand($width-fraction, $length-fraction, $color, $interval-fraction) {
+  border-right-width: calc($main-unit * $width-fraction); 
+  border-left-width: calc($main-unit * $width-fraction);
+  border-bottom-width: calc($main-unit * $length-fraction);
+  border-bottom-color: $color;
+  animation-duration: calc($main-interval * $interval-fraction);
+}
+
+@mixin hand-color($color) {
+  border-bottom-color: $color;
+}
+
+@mixin hand-interval($interval-fraction) {
+  animation-duration: calc($main-interval * $interval-fraction);
 }
 
 @mixin diameter($diameter) {
