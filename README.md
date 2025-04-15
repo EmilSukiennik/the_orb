@@ -1,6 +1,6 @@
 The Orb
 
-A simple CSS project which utilizes interesting random effect of very fast clockwise animation.
+A simple CSS project which utilizes interesting random effect of clockwise animation with very short duration.
 
 ### PREVIEW:
 https://emilsukiennik.github.io/the_orb/
